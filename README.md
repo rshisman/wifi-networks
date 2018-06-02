@@ -12,5 +12,18 @@ Installation:
 3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
 
 Sending requets:
-
+1. Get network details:
+  Request: GET http://localhost:8080/api/network?id=123456
+  Response: 
+  {
+    "id": 123456,
+    "auth": "wpa",
+    "avg_throughput": 450,
+    "devices": [
+        "a1b1",
+        "a1b2",
+        "a1b3",
+        "a1b4"
+    ]
+}
   
