@@ -15,7 +15,7 @@ Sending requets:
 The client can use curl or Postman, an example curl is added at the botom of each API section.
 1. Get network details:
   Request: GET http://localhost:8080/api/network?id=123456
-  Response: 404 of network not found or:
+  Response: 404 if network not found, or:
   {
     "id": 123456,
     "auth": "wpa",
@@ -28,7 +28,7 @@ The client can use curl or Postman, an example curl is added at the botom of eac
     ]
   }
 
-  Example curl:
+    Example curl:
 
 2. connect device:
   Request: PUT http://localhost:8080/api/network/connect
