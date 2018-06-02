@@ -52,6 +52,7 @@ public class WifiNetworksRepository{
             Path repoFilePath = Paths.get(System.getenv(REPOSITORY_FILE_LOCATION), REPOSITORY_FILE);
             Files.write(repoFilePath, repoJson.getBytes());
         } catch (Exception e) {
+            //TODO do some logging here
             throw new RuntimeException("Save to networks repository failed!!!");
         }
     }
