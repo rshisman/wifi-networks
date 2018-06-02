@@ -12,6 +12,7 @@ Installation:
 3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
 
 Sending requets:
+
 The client can use curl or Postman, an example curl is added at the botom of each API section.
 1. Get network details:
   Request: GET http://localhost:8080/api/network?id=123456
