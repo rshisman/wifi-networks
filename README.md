@@ -13,11 +13,19 @@ To run the wifi-networks app use the following commands (linux):
 unzip wifi-networks-master.zip
 cd wifi-networks-master/docker/
 chmod +x run_wifi_networks_docker.sh
-run ./run_wifi_networks_docker.sh
+./run_wifi_networks_docker.sh
 ```
   
 At this point, you should have a running container named 'wifi-networks-cont1'
 run `docker ps` to verify.
+
+*Note*: you can build the Spring boot application JAR yourself:
+
+```
+export JAVA_HOME=/opt/java/jdk1.8.0_171
+mvn package
+```
+But for convinience I already placed the JAR file in the docker folder.
 
 Sending requets
 ----------------
