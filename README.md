@@ -6,8 +6,8 @@ The data based on one to many relationship between 2 entities - network and devi
 
 Installation:
 -------------
-1. Download the docker folder to a computer with docker engine installed.
-2. From this folder run the following commands:
+*Download the docker folder to a computer with docker engine installed.
+*From this folder run the following commands:
 
 docker build --tag=wifi-networks-app:latest --rm=true .
 
@@ -18,6 +18,7 @@ docker run -p 8080:8080 --name wifi-networks-cont1 wifi-networks-app
 Sending requets:
 
 The client can use curl or Postman, an example curl is added at the botom of each API section.
+
 API no.1 - Get network details
 -------------------------------
 
