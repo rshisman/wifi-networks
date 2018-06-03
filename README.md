@@ -8,11 +8,12 @@ Installation
 -------------
 Download the repository as zip.
 To run the wifi-networks app use the following commands (linux):
-'''
+
+```
 unzip wifi-networks-master.zip
 cd wifi-networks-master/docker/
 run ./run_wifi_networks_docker.sh
-'''
+```
   
 3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
 
