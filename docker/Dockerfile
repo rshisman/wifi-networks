@@ -1,6 +1,5 @@
 FROM openjdk:8-jdk-alpine
 
-VOLUME /tmp
 ENV REPOSITORY_FILE_LOCATION="/var/lib/wifiNetworks/repository"
 
 RUN mkdir -p /var/lib/wifiNetworks/repository
