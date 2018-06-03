@@ -15,7 +15,8 @@ cd wifi-networks-master/docker/
 run ./run_wifi_networks_docker.sh
 ```
   
-3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
+At this point, you should have a running container named 'wifi-networks-cont1'
+run `docker ps` to verify.
 
 Sending requets
 ----------------
@@ -40,7 +41,8 @@ Response: 404 if network not found, or:
     ]
   }
 
-  Example curl: curl -X GET http://localhost:8080/api/network?id=123456
+  Example curl:
+  ```curl -X GET http://localhost:8080/api/network?id=123456```
 
 API no.2 - connect device
 --------------------------
@@ -54,9 +56,8 @@ Request: PUT http://localhost:8080/api/network/connect
 
 Response: HTTP code 200/409/500/400 and the relevant message.
   
-Example curl: 
-  
-curl -X PUT -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": "123456", "auth" : "wpa" }'    http://localhost:8080/api/network/connect
+Example curl:   
+```curl -X PUT -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": "123456", "auth" : "wpa" }'    http://localhost:8080/api/network/connect```
 
 API no.3 - report throughput
 ----------------------------
@@ -71,7 +72,6 @@ Request: POST http://localhost:8080/api/network/report
 Response: HTTP code 200/409/500/400 and the relevant message.
   
 Example curl: 
-  
-curl -X POST -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": 123456, "throughput" : 400 }' http://localhost:8080/api/network/report
+```curl -X POST -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": 123456, "throughput" : 400 }' http://localhost:8080/api/network/report```
   
   
