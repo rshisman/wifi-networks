@@ -4,10 +4,10 @@ The wifi-networks application exposes 3 REST APIs that enable clients to connect
 
 The data based on one to many relationship between 2 entities - network and device, so we could use a relational database, but It seems more suitable to use a documnet database like MongoDB, where the parent and non-lazy childs are in one document record, it's simple and readable (for example, no joins are necessary). I did not have enough time to add mongo to the party, so I used a Map where each value is a network "document". The Map data is stored as JSON to a file in /var/lib/wifiNetworks/repository (can be configured via a system variable in the Dockerfile). 
 
-Installation:
+Installation
 -------------
-*Download the docker folder to a computer with docker engine installed.
-*From this folder run the following commands:
+1. Download the docker folder to a computer with docker engine installed.
+2. From this folder run the following commands:
 
 docker build --tag=wifi-networks-app:latest --rm=true .
 
@@ -15,7 +15,8 @@ docker run -p 8080:8080 --name wifi-networks-cont1 wifi-networks-app
   
 3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
 
-Sending requets:
+Sending requets
+----------------
 
 The client can use curl or Postman, an example curl is added at the botom of each API section.
 
