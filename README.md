@@ -23,7 +23,8 @@ run `docker ps` to verify.
 
 ```
 export JAVA_HOME=/opt/java/jdk1.8.0_171
-mvn package
+chmod +x mvnw
+./mvnw package
 ```
 But for convinience I already placed the JAR file in the docker folder.
 
