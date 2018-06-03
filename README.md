@@ -32,7 +32,7 @@ The client can use curl or Postman, an example curl is added at the botom of eac
     ]
   }
 
-    Example curl:
+    Example curl: curl -X GET http://localhost:8080/api/network?id=123456
 
 2. connect device:
   Request: PUT http://localhost:8080/api/network/connect
@@ -42,13 +42,22 @@ The client can use curl or Postman, an example curl is added at the botom of eac
     "auth" : "wpa"
     }
   Response: HTTP code 200/409/500/400 and the relevant message.
+  
+  Example curl: 
+  
+  curl -X PUT -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": "123456", "auth" : "wpa" }'    http://localhost:8080/api/network/connect
 
 3. report throughput:
-  Request: PUT http://localhost:8080/api/network/report
+  Request: POST http://localhost:8080/api/network/report
   body: {
     "device_id": "a1b3",
     "network_id": 123456,
     "throughput" : 1000
     }
   Response: HTTP code 200/409/500/400 and the relevant message.
+  
+  Example curl: 
+  
+  curl -X POST -H "Content-Type: application/json" -d '{ "device_id": "a1b1", "network_id": 123456, "throughput" : 400 }' http://localhost:8080/api/network/report
+  
   
