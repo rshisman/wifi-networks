@@ -12,6 +12,7 @@ To run the wifi-networks app use the following commands (linux):
 ```
 unzip wifi-networks-master.zip
 cd wifi-networks-master/docker/
+chmod +x run_wifi_networks_docker.sh
 run ./run_wifi_networks_docker.sh
 ```
   
