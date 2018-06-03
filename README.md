@@ -6,12 +6,13 @@ The data based on one to many relationship between 2 entities - network and devi
 
 Installation
 -------------
-1. Download the docker folder to a computer with docker engine installed.
-2. From this folder run the following commands:
-
-docker build --tag=wifi-networks-app:latest --rm=true .
-
-docker run -p 8080:8080 --name wifi-networks-cont1 wifi-networks-app
+Download the repository as zip.
+To run the wifi-networks app use the following commands (linux):
+'''
+unzip wifi-networks-master.zip
+cd wifi-networks-master/docker/
+run ./run_wifi_networks_docker.sh
+'''
   
 3. At this point, you should have a container named 'wifi-networks-cont1' (run 'docker ps' to validate).
 
